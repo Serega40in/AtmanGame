@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Путь к Свету</title>
+  <script src="https://unpkg.com/phaser@3.55.2/dist/phaser.min.js"></script>
+</head>
+<body>
+  <script>
+    const config = {
+      type: Phaser.AUTO,
+      width: 800,
+      height: 600,
+      scene: {
+        preload: function() { this.load.image('light', 'light.png'); },
+        create: function() {
+          this.add.image(400, 300, 'light');
+          this.add.text(300, 50, 'Собери частицы истины', { fontSize: '32px', color: '#fff' });
+        }
+      }
+    };
+    const game = new Phaser.Game(config);
+  </script>
+</body>
+</html>
