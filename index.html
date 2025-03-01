@@ -20,5 +20,13 @@
     };
     const game = new Phaser.Game(config);
   </script>
+  <script src="https://unpkg.com/@ton-community/sdk@0.0.26/dist/index.js"></script>
+<script>
+  const client = new TonClient({ endpoint: 'https://testnet.toncenter.com/api/v2/jsonRPC' });
+  async function connectWallet() {
+    const wallet = await window.ton.connect(); // TON Connect через Telegram
+    console.log('Подключён кошелёк:', wallet.account.address);
+  }
+</script>
 </body>
 </html>
